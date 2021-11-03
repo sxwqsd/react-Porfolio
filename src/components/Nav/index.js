@@ -1,59 +1,69 @@
 import React from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import { Link, withRouter } from "react-router-dom";
 
-function Nav(){
 
-    const categories = [
-        {
-          name: "Works",
-          description:
-            "Links to projects I've led or been apart of.",
-        },
-        { name: "Resume", description: "For a more in dept tellign of my expierience" },
-       
-      ];
+function Nav(props){
 
-const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
 
   return (
     <header className="flex-row px-1">
-      <h2>
+    <nav>
+      <div class="flex-row">
+        <Link class="navbar-brand" to="/">
+        <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="squid">
-            {"🦑 "}
-            
-          </span>
-          Valeria Mercado
-          </a>
+          <span role="img" aria-label="squid"> 🦑</span> Valeria Mercado
+        </a>
       </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => handleClick("About")}>
-              About me
-            </a>
-          </li>
-          <li className={"mx-2"}>
-            <span onClick={() => handleClick('Contact')}>
-              Contact
-            </span>
-          </li>
-          {
-            categories.map((category) => (
-              <li className="mx-1" key={category.name} >
-                <span onClick={() => { handleClick(category.name); }}>
-                 {capitalizeFirstLetter(category.name)}
-                </span>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </header>
+          
+        </Link>
+
+        <div>
+          <ul class="flex-row">
+            <li
+              class={` mx-2 ${
+                props.location.pathname === "/" ? "navactive" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/">
+                About
+                <span class="sr-only"></span>
+              </Link>
+            </li>
+            <li
+              class={`mx-2  ${
+                props.location.pathname === "/portfolio" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/portfolio">
+                Portfolio
+              </Link>
+            </li>
+            <li
+              class={`mx-2  ${
+                props.location.pathname === "/contact" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/contact">
+                Contact
+              </Link>
+            </li>
+            <li
+              class={`mx-2  ${
+                props.location.pathname === "/Resume" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/Resume">
+                Resume
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+   
   );
 }
 
-export default Nav;
+export default withRouter(Nav);

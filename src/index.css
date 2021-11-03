@@ -5,12 +5,12 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #388697;
+  --secondary: #fa8334;
+  --tertiary: #96e8bc;
   --light: #fafafa;
-  --dark: #000000;
-  --darker: #111111;
+  --dark: #222725;
+  --darker: #271033;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -96,7 +96,7 @@ header {
   background: var(--dark);
 }
 
-header a {
+header  {
   color: var(--light);
 }
 
@@ -194,6 +194,7 @@ textarea {
 .mx-2 {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
+  font-family: 'Roboto', sans-serif;
 }
 
 .my-1 {
