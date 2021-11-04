@@ -50,10 +50,10 @@ function Nav(props){
             </li>
             <li
               class={`mx-2  ${
-                props.location.pathname === "/Resume" ? "active" : ""
+                props.location.pathname === "/resume" ? "active" : ""
               }`}
             >
-              <Link class="nav-link" to="/Resume">
+              <Link class="nav-link" to="/resume">
                 Resume
               </Link>
             </li>

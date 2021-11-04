@@ -24,7 +24,7 @@ function Portfolio(){
                 <img src={foodjunkies} alt="foodJunkies"
                  width="309px" height="auto"></img>
             </a>
-            <a class="project" href="https://sxwqsd.github.io/Work-Day-Scheddiver/">
+            <a class="my-5" href="https://sxwqsd.github.io/Work-Day-Scheduler/">
                 <img src= {workday}alt="Work-Day-Scheduler"
                     width="309px" height="auto"></img>
             </a>
