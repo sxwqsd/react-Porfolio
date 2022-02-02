@@ -10,12 +10,9 @@ function Nav(props){
     <nav>
       <div class="flex-row">
         <Link class="navbar-brand" to="/">
-        <h2>
-        <a data-testid="link" href="/">
-          <span role="img" aria-label="squid"> 🦑</span> Valeria Mercado
-        </a>
-      </h2>
-          
+        <div class="typewriter">
+            <h1>Valeria Mercado 🦑</h1>
+          </div>
         </Link>
 
         <div>
@@ -39,24 +36,7 @@ function Nav(props){
                 Portfolio
               </Link>
             </li>
-            <li
-              class={`mx-2  ${
-                props.location.pathname === "/contact" ? "active" : ""
-              }`}
-            >
-              <Link class="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-            <li
-              class={`mx-2  ${
-                props.location.pathname === "/resume" ? "active" : ""
-              }`}
-            >
-              <Link class="nav-link" to="/resume">
-                Resume
-              </Link>
-            </li>
+      
           </ul>
         </div>
       </div>

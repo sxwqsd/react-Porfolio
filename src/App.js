@@ -5,8 +5,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Resume from './components/Resume';
+
 
 
 
@@ -19,8 +18,6 @@ function App() {
         <Switch>
           <Route path="/" exact component={() => <About />} />
           <Route path="/Portfolio" exact component={() => <Portfolio />} />
-          <Route path="/contact" exact component={() => <Contact />} />
-          <Route path="/resume" exact component={() => <Resume />} />
         </Switch>
         <Footer />
       </Router>
