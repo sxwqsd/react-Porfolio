@@ -56,10 +56,54 @@ main {
   align-content: center;
 
 }
+.flip-card {
+  background-color: var(--dark);
+  width: 618px;
+  height: auto;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: 60px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--dark);
+  color: var(--light);
+  transform: rotateY(180deg);
+}
 .project {
-  display: flex;
-  width: 1236;
-  height:auto;
+  margin-top: 60px;
+  width: 618px;
+  height: auto;
+  margin-bottom: 40px;
 }
 .projectName {
   font-family:'Times New Roman', Times, serif

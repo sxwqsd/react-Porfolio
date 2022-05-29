@@ -39,15 +39,6 @@ function Portfolio() {
       </div>
 
       <div class="project">
-        <a className="my-5" href="https://notetakeforestthecat.herokuapp.com/">
-          <img src={notetaker} alt="noteTaker"></img>
-        </a>
-        <div class="container">
-          <h1 class="projectName">Note Taker</h1>
-          <p class="projectDesc">Note Taker is an application used for taking notes and storing them into local storage.</p>
-        </div>
-      </div>
-      <div class="project">
         <a className="my-5" href="https://zdensamson.github.io/food_junkies/">
           <img src={foodjunkies} alt="foodJunkies"></img>
         </a>
@@ -56,17 +47,8 @@ function Portfolio() {
           <p class="projectDesc">An application that helps user's use ingridients they have in their fridge or pantry.</p>
         </div>
       </div>
-
-      <div class="project">
-        <a class="my-5" href="https://sxwqsd.github.io/Work-Day-Scheduler/">
-          <img src={workday} alt="Work-Day-Scheduler"></img>
-        </a>
-        <div class="container">
-          <h1 class="projectName"> Work Day Scheduler</h1>
-          <p class="projectDesc">This is an online planner you can use to track the tasks you have for the day. This can be used by a busy person to organize their day.</p>
-        </div>
       </div>
-    </div>
+
   );
 }
 
